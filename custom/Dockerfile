@@ -6,6 +6,7 @@ RUN apt update && sudo apt install --no-install-recommends -y \
 	net-tools \
 	xterm \
 	terminator \
+	python-pip3 \
 	ros-noetic-joy \
 	ros-noetic-turtle* \
 	ros-noetic-rqt-graph \
