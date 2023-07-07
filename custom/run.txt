@@ -1,0 +1,20 @@
+   42  docker run --name ros_test --rm -it -v ros_mount:/root/.ros ros
+   43  docker run --name ros_test --rm -it -v ros_mount:/root/.ros ros:noetic-ros-base-focal 
+   58  docker run hello-world
+   78  docker run --name ros_test --rm -it -v ros_mount:/root/.ros ros:noetic-ros-base-focal 
+   79  docker run --name ros_test --rm -it -v ros_mount:/root/.ros -v /dev/input:/dev/input ros:noetic-ros-base-focal 
+   81  docker run --name ros_test --priviledge -it -v ros_mount:/root/.ros -v /dev/input:/dev/input ros:noetic-ros-base-focal 
+   82  docker run --name ros_test --privileged -it -v ros_mount:/root/.ros -v /dev/input:/dev/input ros:noetic-ros-base-focal 
+   90  history | grep docker run
+   91  history | grep "docker run"
+   92  history | grep "docker run" > docker_run_ros.txt
+  122  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -u 1000 -v ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal 
+  123  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -u 1000 -v $HOME/ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal 
+  124  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -u 1000 -v $HOME/ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal --hostname
+  127  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -u 1000 -v $HOME/ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal --hostname
+  128  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -u 1000 -v $HOME/ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal
+  130  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -u 1000 -v $HOME/ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal
+  132  docker run -it --name ros_robot --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/ros_mnt/.ros:/root/.ros -v /dev/input:/dev/input --network=host ros:noetic-robot-focal
+  142  docker run -it --name ros_robot_dev --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/ros-mnt/:/workspaces -v /dev/input:/dev/input --network=host ros-img-test
+  152  docker run -it --name ros_robot_dev --privileged -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/ros-mnt/:/workspaces -v /dev/input:/dev/input --network=host ros-dev
+  158  history | grep run > ros-img/run.txt
